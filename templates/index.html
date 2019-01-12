@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="author" content="colorlib.com">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" />
+    <link href="../static/main.css" rel="stylesheet" />
+    <title>Clinical Trials Search Engine for Precision Medicine</title>
+  </head>
+  <body>
+    <div class="s01">
+      <form action='/search' method='post'>
+        <fieldset>
+          <legend>Clinical Trials Search Engine for Precision Medicine</legend>
+        </fieldset>
+        <div class="inner-form">
+          <div class="input-field first-wrap">
+            <input id="search" name='cancer' type="text" placeholder="Variety of cancer (e.g. liposarcoma)" />
+          </div>
+          <div class="input-field second-wrap">
+            <input id="location" name='gene' type="text" placeholder="Genetic variant (e.g. cdk4)" />
+          </div>
+          <div class="input-field third-wrap">
+            <input class="btn-search" type="submit" value='search'></input>
+          </div>
+        </div>
+      </form>
+    </div>
+  </body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>

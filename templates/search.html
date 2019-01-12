@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Search</title>
+  </head>
+  <body>
+    <header class="col-lg-6">
+      <img src='/static/images/nih.png'>
+    </header>
+    <div class="container">
+      <div class="page-title">
+        <div class="row">
+          <div class="col-lg-6 add-content">
+          </div>
+        </div>
+      </div>
+      <div class="page-content">
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="feed">
+              <div class="post">
+                {% for i in results %}
+                  <!-- {% set c = loop.index | string %} -->
+                  <h3><i class="fa fa-heart"></i> <a href={{i[1]}}>{{i[0]}}</a></h3>
+                  <p><small>{{i[1]}}</small></p>
+                  <p>
+                    <span id="former_{{ i[0] }}">{{''.join(i[2][0:5])+'...'}}</span>
+                    <div id="hidden_{{ i[0] }}" style="display: none;">{{''.join(i[2][:15])+'...'}}</div>
+                    <!-- <button onclick="HideHiddenText();" id="less_{ {i[0] }}" style="display: none;" class='more_less'>Less</button>
+                    <button onclick="ShowHiddenText();" id="more_{{ i[0] }}" class='more_less'>More</button>
+                  </p>
+                  <script>
+                    function ShowHiddenText() {
+                      document.getElementById("hidden_{{ i[0] }}").style.display = "inline";
+                      document.getElementById("less_{{ i[0] }}").style.display = "inline";
+                      document.getElementById("more_{{ i[0] }}").style.display= 'none';
+                      document.getElementById("former_{{ i[0] }}").style.display='none';
+                    }
+                    function HideHiddenText() {
+                      document.getElementById("hidden_{{ i[0] }}").style.display ='none';
+                      document.getElementById("former_{{ i[0] }}").style.display='inline';
+                      document.getElementById("less_{{ i[0] }}").style.display='none';
+                      document.getElementById("more_{{ i[0] }}").style.display='inline';
+                    }
+                  </script> -->
+                {% endfor %}
+
+              </div>
+            </div><!-- feed end //-->
+          </div>
+          <!-- sidebar //-->
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
